@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+	<script type="text/javascript">
+  function validate(){
+    var orig_pw = document.f1.orig_pw.value;
+    var reentered_pw = document.f1.reentered_pw.value;
+    if (orig_pw == reentered_pw) {
+      alert("Passwords match!");
+    }
+    else {
+      alert("Passwords don't match, please re-enter.")
+    }
+
+  }
+ 	</script>
+</head>
+
+<body>
+	<h1>Week 3, Exercise 1</h1>
+  <p>Create a page where a user enters a password twice. Check to see if the passwords match. Print an error message via an alert if they don’t match, or show a confirmation message if they do match.
+</p>
+<form name="f1">
+  <p>Enter password: <input type="text" name="orig_pw"></p>
+  <p>Re-enter password: <input type="text" name="reentered_pw"></p>
+  <input type="submit" onClick="validate();" value="Submit">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+  function validate() {
+      var month = document.f1.month.value;
+      var day = document.f1.day.value;
+      var year = document.f1.year.value;
+      if (isNaN(month || day || year)) {
+        alert("Please enter a number.");
+    }
+  }
+ 	</script>
+</head>
+
+<body>
+	<h1>Week 3, Exercise 2</h1>
+<form name="f1">
+  Enter your birthday (mm-dd-yyyy): <input type=text size=2 name=month>-<input type=text size=2 name=day>-<input type=text size=4 name=year>
+  <p>
+  <input type=button value="Verify" onClick="validate();">
+  </p>
+	</form>
+
+</body>
+</html>

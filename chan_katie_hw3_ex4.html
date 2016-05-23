@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+	<script type="text/javascript">
+  
+    function age_check() {
+        var my_date = new Date();
+        // subtracting 21 to get minimum year person could be born.
+        var min_year = my_date.getFullYear()-21; 
+        var min_date = my_date.getDate();
+        var min_month = my_date.getMonth();
+
+        // subtracting one from month because set full year has a scale of 0-11 instead of 1-12.
+        var my_month = document.f1.month.value-1;
+        var my_day = document.f1.day.value;
+        var my_year = document.f1.year.value;
+
+        // adding zeros to birthdate to fix birthday to zero timestamp.
+        var my_birthday = new Date(my_year, my_month, my_day, 0, 0, 0, 0);
+        my_date.setFullYear(min_year, min_month, min_date); 
+
+          if (my_date>=my_birthday){
+            alert("You are old enough."); 
+          }
+          else {
+            alert("You are not old enough.");
+          }
+         
+        }
+
+ 	</script>
+</head>
+
+<body>
+	<h1>Week 3, Exercise 4</h1>
+ 
+<form name="f1">
+  Enter your birthday (mm-dd-yyyy): <input type=text size=2 name=month>-<input type=text size=2 name=day>-<input type=text size=4 name=year>
+  <p>
+  <input type=button value="Verify" onClick="age_check();">
+  </p>
+	</form>
+<p id="displayage"></p>
+</body>
+</html>

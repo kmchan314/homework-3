@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+  function isleapyear() {
+      var date = new Date();
+      var cur_year = date.getFullYear(); 
+      var cur_date = date.getDate();
+      var cur_motnh = date.getMonth();
+      var month = document.f1.month.value;
+      var day = document.f1.day.value;
+      var year = document.f1.year.value;
+      if (month == 02 && day == 29){
+        alert("Leap year, nice!");
+    }
+  }
+ 	</script>
+</head>
+
+<body>
+	<h1>Week 3, Exercise 3</h1>
+<form name="f1">
+  Enter your birthday (mm-dd-yyyy): <input type=text size=2 name=month>-<input type=text size=2 name=day>-<input type=text size=4 name=year>
+  <p>
+  <input type=button value="Verify" onClick="isleapyear();">
+  </p>
+	</form>
+
+</body>
+</html>
